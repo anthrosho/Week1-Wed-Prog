@@ -22,7 +22,7 @@ public class MoonButton : MonoBehaviour
         {
 
             Weather.GetComponent<Weather>().NightCycle();
-           Debug.Log("NightCounter incremented: " );
+           
 
 
         }

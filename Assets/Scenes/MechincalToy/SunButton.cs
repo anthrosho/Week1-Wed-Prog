@@ -24,7 +24,7 @@ public class SunButton : MonoBehaviour
         {
             Weather.GetComponent<Weather>().DayCycle();
 
-            Debug.Log("DayCounter incremented: " );
+         
 
         }
     }

@@ -10,7 +10,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Weather : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Boolean DayNightCycle;
+    public Boolean DayNightCycle; //
     private Vector3 DayTimePosition = new Vector3(0,  0, - 354.50f);
     private Vector3 NightTimePosition = new Vector3(0, 0, -531.09f);
     public float t;
@@ -23,7 +23,6 @@ public class Weather : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         
         t += Time.deltaTime * 0.3f;
         
