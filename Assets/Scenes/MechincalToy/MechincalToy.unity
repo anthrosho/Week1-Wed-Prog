@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318593200}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.03, y: 3.3, z: 0.0011198344}
   m_LocalScale: {x: 4.074687, y: 4.0298295, z: 1}
   m_ConstrainProportionsScale: 0
@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 550863151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 3.22, z: 0}
+  m_LocalPosition: {x: 13.71, y: 3.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -368,13 +368,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028144462}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000013254814, w: 1}
   m_LocalPosition: {x: -3.28, y: -1.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.002}
 --- !u!114 &1028144465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f06162bdd76dec478596b03690dc42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Weather: {fileID: 1847835255}
+  mousePosition: {x: 0, y: 0}
 --- !u!1 &1356973374
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +551,7 @@ Transform:
   m_GameObject: {fileID: 1423098256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.81, y: 3.54, z: 0}
+  m_LocalPosition: {x: -14.52, y: 3.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -658,7 +660,7 @@ GameObject:
   - component: {fileID: 1847835257}
   - component: {fileID: 1847835256}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Weather
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,6 +678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696e63e7179815c498bbba682deb6226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DayNightCycle: 0
+  CurrentRotation: {x: 0, y: 0, z: 0}
+  t: 0
 --- !u!4 &1847835257
 Transform:
   m_ObjectHideFlags: 0
@@ -684,7 +689,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847835255}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.011652429, y: -0.008598803, z: 0.016129414, w: 0.9997651}
+  m_LocalRotation: {x: -0, y: 0, z: -0.047978394, w: -0.9988484}
   m_LocalPosition: {x: 5.61, y: 0.27, z: -1.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -692,7 +697,7 @@ Transform:
   - {fileID: 1356973375}
   - {fileID: 318593201}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -1.319, y: -1.007, z: 1.86}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -354.5}
 --- !u!1 &2076618693
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865280ade93259c44b4b32596f5b242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mousePosition: {x: 0, y: 0}
+  Weather: {fileID: 1847835255}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
