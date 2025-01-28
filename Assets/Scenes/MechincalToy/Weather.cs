@@ -13,13 +13,11 @@ public class Weather : MonoBehaviour
     public Boolean DayNightCycle;
     private Vector3 DayTimePosition = new Vector3(0,  0, - 354.50f);
     private Vector3 NightTimePosition = new Vector3(0, 0, -531.09f);
-    public Vector3 CurrentRotation; 
     public float t;
+    public Boolean lockf = false; 
 
     void Start()
     {
-        CurrentRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-        DayNightCycle = true;
     }
 
     // Update is called once per frame
@@ -28,34 +26,50 @@ public class Weather : MonoBehaviour
 
         
         t += Time.deltaTime * 0.3f;
-
+        
         if (DayNightCycle == true)
         {
-            transform.rotation = Quaternion.Euler(Vector3.Lerp(CurrentRotation, DayTimePosition,t));
+            transform.rotation = Quaternion.Euler(Vector3.Lerp(NightTimePosition, DayTimePosition,t));
         }
 else
         {
-            transform.rotation = Quaternion.Euler(Vector3.Lerp(CurrentRotation, NightTimePosition, t));
+            transform.rotation = Quaternion.Euler(Vector3.Lerp(DayTimePosition, NightTimePosition, t));
+
 
         }
+    if (t >= 1)
+        {
+            lockf = false; 
+
+        }
+
     }
 public void DayCycle ()
     {
-      
-        
-      
-      CurrentRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-      DayNightCycle = true;
-        t = 0;
+
+
+
+        if (lockf == false && DayNightCycle == false)
+        {
+            t = 0;
+            DayNightCycle = true;
+            lockf = true;
+
+        }
+
     }
     public void NightCycle()
     {
-        
 
-      
-        CurrentRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-        DayNightCycle = false;
-        t = 0;
+        if (lockf == false && DayNightCycle == true) {
+
+            t = 0;
+            DayNightCycle = false;
+            lockf = true;
+        }
+
+
+        
     }
 
 
